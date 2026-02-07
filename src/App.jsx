@@ -3,9 +3,10 @@ import logo from './logo.svg';
 
 import './App.css';
 import Head from './Components/Head';
-import Sidebar from './Components/Sidebar';
+
 import Body from './Components/Body';
 import store from "./Components/Utils/Store";
+
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <div >
      <Head />
      <Body />
+     
     </div>
     </Provider>
   );
