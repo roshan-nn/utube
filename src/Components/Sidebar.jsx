@@ -6,7 +6,7 @@ const Sidebar = () => {
     const isMenuOpen = useSelector(store => store.app.isMenuOpen);
     console.log(isMenuOpen)
   return (
-    <div>
+    <div className='flex-col items-center justify-center p-5'>
         {
             isMenuOpen?(
                 

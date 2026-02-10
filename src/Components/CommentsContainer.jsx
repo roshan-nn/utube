@@ -4,7 +4,14 @@ const commentsData = [
     {
     name: "Akshay Saini",
     text: "Lorem ipsum dolor sit amet",
+    replies: [
+         {
+             name: "Akshay Saini",
+    text: "Lorem ipsum dolor sit amet",
     replies: [],
+    
+        },
+    ],
 },
 
  {
@@ -69,9 +76,7 @@ const CommentsList = ({comments}) => {
         <div>
        <Comment key={index} data={comment} />
     <div className='pl-5 ml-5 border border-l border-l-black'>
-       <Comment key={index} data={comment} />
-       <Comment key={index} data={comment} />
-        <Comment key={index} data={comment} />
+      <CommentsList comments={comment.replies} />
        </div>
        </div>
     ));
