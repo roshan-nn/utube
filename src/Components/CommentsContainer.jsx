@@ -15,13 +15,13 @@ const commentsData = [
 },
 
  {
-    name: "Akshay Saini",
+    name: "pablo",
     text: "Lorem ipsum dolor sit amet",
     replies: [],
 },
 
 {
-     name: "Akshay Saini",
+     name: "ben",
     text: "Lorem ipsum dolor sit amet",
     replies: [
         {
@@ -31,7 +31,7 @@ const commentsData = [
     
         },
         {
-             name: "Akshay Saini",
+             name: "abel",
     text: "Lorem ipsum dolor sit amet",
     replies: [],
     

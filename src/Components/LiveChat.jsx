@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
 import ChatMessage from './ChatMessage'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addMessage } from './Utils/chatSlice';
+import { generateRandomName } from './Utils/helper';
 
 const LiveChat = () => {
  const dispatch = useDispatch();
 
-   const ChatMessages = use
+   const ChatMessages = useSelector((store) => store.chat.messages);
+
     useEffect(() => {
       const i=  setInterval(() => {
        
@@ -14,37 +16,30 @@ const LiveChat = () => {
 
         dispatch(
             addMessage({
-            name: "Akshay Saini",
-            message: "Lorem Ipsum Dolor"
+            name: generateRandomName(),
+            message: "Lorem Ipsum Dolor",
         })
     )
       }, 2000)
 
         return () => clearInterval(i);
     }, []);
-  return (
-    <div className='w-full h-[600px] ml-2 p-2 border border-black bg-slate-100'>
-      <ChatMessage
-       name="Akshay saini"
-        message="This is namaste React Live" 
-      />
-       <ChatMessage
-        name="tom"
-         message="This is namaste React Live" 
-         />
-        <ChatMessage 
-        name="ben"
-         message="This is namaste React Live" 
-         />
-
-         <ChatMessage
-          name="ann"
-           message="This is namaste React Live"
-            />
-    </div>
-
     
-  )
+  return (
+    <div className='w-full h-[600px] ml-2 p-2 border border-black bg-slate-100 overflow-y-scroll'>
+      
+          {ChatMessages.map((c,i) => (
+            <ChatMessage key={i} name={c.name} message={c.message} />
+        ))}
+                      
+    </div>
+      )
 }
 
-export default LiveChat
+export default LiveChat;
+      
+
+
+    
+
+
