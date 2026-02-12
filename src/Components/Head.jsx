@@ -12,7 +12,7 @@ const Head = () => {
     <div className='flex justify-around col-span-1 w-[20%]'>
         <img 
         onClick={() => toggleMenuHandler()}
-        className='w-10 cursor-pointer' src='https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-4.png'/>
+        className='w-10 h-8 cursor-pointer' src='https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-4.png'/>
     </div>  
     <div className='pt-3 object-fit: contain w-30%]'>
         <a href='/'>
