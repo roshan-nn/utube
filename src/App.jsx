@@ -1,6 +1,6 @@
 import {Provider} from "react-redux";
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import logo from './logo.svg';
+
 import './App.css';
 import Head from './Components/Head';
 import Body from './Components/Body';
