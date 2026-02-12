@@ -1,6 +1,3 @@
- 
- 
- 
  var nameList = [
                 'Time','Past','Future','Dev',
                 'Fly','Flying','Soar','Soaring','Power','Falling',
